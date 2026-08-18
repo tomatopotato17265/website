@@ -5,18 +5,19 @@
  */
 
 :root {
-	--accent: #e83e9c;
-	--accent-dark: #7b2fd4;
-	--gold: #f5b942;
-	--bg: #0a0714;
-	--black: 230, 220, 245;
-	--gray: 180, 160, 210;
-	--gray-light: 40, 22, 60;
-	--gray-dark: 225, 215, 238;
-	--gray-gradient: rgba(123, 47, 212, 30%), #0a0714;
+	--accent: #c23fa0;
+	--accent-dark: #1a1a6e;
+	--gold: #d9a53a;
+	--red: #a8231f;
+	--bg: #050308;
+	--black: 215, 200, 225;
+	--gray: 140, 120, 165;
+	--gray-light: 20, 14, 40;
+	--gray-dark: 195, 185, 210;
+	--gray-gradient: rgba(26, 26, 110, 25%), #050308;
 	--box-shadow:
-		0 2px 6px rgba(232, 62, 156, 20%), 0 8px 24px rgba(123, 47, 212, 25%),
-		0 16px 32px rgba(10, 7, 20, 45%);
+		0 2px 6px rgba(26, 26, 110, 25%), 0 8px 24px rgba(98, 33, 168, 20%),
+		0 16px 32px rgba(5, 3, 8, 50%);
 }
 body {
 	font-family: var(--font-atkinson);
@@ -71,7 +72,7 @@ a {
 	color: var(--accent);
 }
 a:hover {
-	color: var(--accent);
+	color: var(--gold);
 }
 p {
 	margin-bottom: 1em;
@@ -107,14 +108,21 @@ pre > code {
 	all: unset;
 }
 blockquote {
-	border-left: 4px solid var(--accent);
+	border-left: 4px solid var(--gold);
 	padding: 0 0 0 20px;
 	margin: 0;
 	font-size: 1.333em;
 }
 hr {
 	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+	height: 2px;
+	background: linear-gradient(
+		90deg,
+		var(--red),
+		var(--accent-dark),
+		var(--accent),
+		var(--gold)
+	);
 }
 @media (max-width: 720px) {
 	body {

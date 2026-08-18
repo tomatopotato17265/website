@@ -46,8 +46,17 @@ import HeaderLink from './HeaderLink.astro';
 	header {
 		margin: 0;
 		padding: 0 1em;
-		background: rgb(15, 8, 25);
+		background: #050308;
 		box-shadow: var(--box-shadow);
+		border-bottom: 2px solid;
+		border-image: linear-gradient(
+				90deg,
+				var(--red),
+				var(--accent-dark),
+				var(--accent),
+				var(--gold)
+			)
+			1;
 	}
 	h2 {
 		margin: 0;
