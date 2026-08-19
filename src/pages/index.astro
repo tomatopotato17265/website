@@ -65,12 +65,28 @@ const entries = [...renderedPosts, aboutEntry].sort(
 			.spectrum-divider {
 				margin: 3em 0;
 			}
+			.wave {
+				display: inline-block;
+				line-height: 1;
+				margin-right: 0.15em;
+				transform-origin: 70% 84%;
+				animation: wave 1.4s ease-in-out infinite;
+			}
+			@keyframes wave {
+				0%,
+				100% {
+					transform: rotate(-20deg);
+				}
+				50% {
+					transform: rotate(20deg);
+				}
+			}
 		</style>
 	</head>
 	<body>
 		<main>
 			<section class="intro">
-				<h1>🧑‍🚀 Hey, I'm Nimai!</h1>
+				<h1><span class="wave">👋</span> Hey, I'm Nimai!</h1>
 				<p>And here's my page :)</p>
 			</section>
 			<hr class="spectrum-divider" />
