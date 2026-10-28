@@ -1,0 +1,63 @@
+---
+import curseforgeIcon from '../assets/curseforge.svg';
+import discordIcon from '../assets/discord.svg';
+import githubIcon from '../assets/github.svg';
+import mailIcon from '../assets/mail.svg';
+import modrinthIcon from '../assets/modrinth.svg';
+
+const icons = [
+	{ src: modrinthIcon.src, alt: 'Modrinth' },
+	{ src: curseforgeIcon.src, alt: 'CurseForge' },
+	{ src: githubIcon.src, alt: 'GitHub' },
+	{ src: discordIcon.src, alt: 'Discord' },
+	{ src: mailIcon.src, alt: 'Mail' },
+];
+---
+
+<header class="top-bar">
+	<a class="brand" href="/"></a>
+	<div class="icons">
+		{
+			icons.map((icon) => (
+				<img src={icon.src} alt={icon.alt} width="40" height="40" />
+			))
+		}
+	</div>
+</header>
+
+<style>
+	.top-bar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem 1.5rem;
+		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		background: #fff;
+		border-bottom: 1px solid rgba(17, 24, 39, 0.1);
+	}
+
+	.brand {
+		font-weight: 700;
+		color: #111827;
+		text-decoration: none;
+	}
+
+	.icons {
+		display: flex;
+		align-items: center;
+		gap: 1.1rem;
+	}
+
+	.icons img {
+		display: block;
+		width: 30px;
+		height: 30px;
+		filter: brightness(0) saturate(100%);
+		opacity: 0.85;
+		transition: opacity 0.2s;
+	}
+
+	.icons img:hover {
+		opacity: 1;
+	}
+</style>
