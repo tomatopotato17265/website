@@ -6,11 +6,15 @@ import mailIcon from '../assets/mail.svg';
 import modrinthIcon from '../assets/modrinth.svg';
 
 const icons = [
-	{ src: modrinthIcon.src, alt: 'Modrinth' },
-	{ src: curseforgeIcon.src, alt: 'CurseForge' },
-	{ src: githubIcon.src, alt: 'GitHub' },
-	{ src: discordIcon.src, alt: 'Discord' },
-	{ src: mailIcon.src, alt: 'Mail' },
+	{ src: modrinthIcon.src, alt: 'Modrinth', href: 'https://modrinth.com/user/tomatopotato' },
+	{
+		src: curseforgeIcon.src,
+		alt: 'CurseForge',
+		href: 'https://www.curseforge.com/members/tomatopotato/',
+	},
+	{ src: githubIcon.src, alt: 'GitHub', href: 'https://github.com/tomatopotato17265' },
+	{ src: discordIcon.src, alt: 'Discord', href: 'https://discord.com/users/821825130506092594' },
+	{ src: mailIcon.src, alt: 'Mail', href: 'mailto:contact@pencilstub.dev' },
 ];
 ---
 
@@ -19,7 +23,9 @@ const icons = [
 	<div class="icons">
 		{
 			icons.map((icon) => (
-				<img src={icon.src} alt={icon.alt} width="40" height="40" />
+				<a href={icon.href} target="_blank" rel="noopener noreferrer">
+					<img src={icon.src} alt={icon.alt} width="40" height="40" />
+				</a>
 			))
 		}
 	</div>
@@ -46,6 +52,11 @@ const icons = [
 		display: flex;
 		align-items: center;
 		gap: 1.1rem;
+	}
+
+	.icons a {
+		display: block;
+		line-height: 0;
 	}
 
 	.icons img {
